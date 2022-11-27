@@ -1,7 +1,7 @@
-/* -------  General Styles ------- */
+/* ------- General Styles ------- */
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 h2 {
@@ -30,15 +30,15 @@ section.alternate-background {
   color: #fff;
 }
 
+img {
+  width: 100%;
+}
 
-
-/* ---  Groups & Items --- */
+/* --- Groups & Items --- */
 
 .group {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
 }
 
 .item {
@@ -50,19 +50,17 @@ section.alternate-background {
   flex: 2;
 }
 
-/* -------  Navigation ------- */
+/* ------- Navigation ------- */
 
 header {
   background-color: #ff385c;
-  padding: 20px 20px 0 20px;
-  text-align: center
-
-
+  padding: 20px 20px 10px 20px;
+  text-align: center;
 }
 
 .logo {
-  font-family: "Pangolin", cursive;
-  font-size: 5rem;
+  font-family: 'Pangolin', cursive;
+  font-size: 42px;
   color: #fff;
 }
 
@@ -76,41 +74,29 @@ header nav ul {
 
 header nav ul li {
   list-style-type: none;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
 }
 
 header nav ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 0 20px 0 0;
 }
 
 header nav ul li a:hover {
   color: #bdbdbd;
   text-decoration: none;
 }
-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
-section img {
-    max-width: 100%;
-}
-
-section.alternate-background {
-    background-color: #00a699;
-    color: #fff;
-}
-/* -------  Search Form ------- */
+/* ------- Search Form ------- */
 form {
   border: 2px solid #ff385c;
-  padding: 10px;
+  padding: 20px;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
 }
 
 form label {
@@ -119,7 +105,6 @@ form label {
 
 form select,
 form input {
-  margin-bottom: 20px;
   width: 180px;
 }
 
@@ -131,20 +116,22 @@ form button {
   padding: 15px;
   width: 100%;
 }
-form.group {
-    width: 90%;
-    margin: 0 20px 20px 20px;
-}
-form > .group {
-    flex-flow: row wrap;
-    justify-content: space-between;
+
+form .select {
+  display: inline-block;
 }
 
-form > .item {
-    width: 100%;
+/* ------- About ------- */
+#about img {
+  padding: 20px 0;
 }
 
-/* -------  Footer ------- */
+/* ------- Ideas ------- */
+#ideas .invis-mobile {
+  display: none;
+}
+
+/* ------- Footer ------- */
 
 footer {
   background-color: #ff385c;
@@ -157,3 +144,134 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 480px) {
+  /* ------- Header ------- */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 30px;
+  }
+
+  header nav ul li {
+    padding: 0 8px;
+  }
+
+  /* ------- Top Section ------- */
+  #findrental form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0px 10px;
+  }
+
+  #findrental label {
+    width: 100%;
+  }
+
+  #findrental .select {
+    width: 100%;
+  }
+
+  #findrental button {
+    padding: 10px 20px;
+    font-size: 20px;
+  }
+
+  #findrental div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 5px;
+  }
+
+  /* ------- About ------- */
+  #about .about-inner-content {
+    text-align: center;
+  }
+
+  #about img {
+    width: 250px;
+    padding: 30px;
+  }
+
+  /* ------- Ideas ------- */
+}
+
+@media all and (min-width: 800px) {
+  /* ------- About ------- */
+  #about {
+    padding: 30px;
+  }
+
+  #about .about-inner-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  #about p {
+    width: 50%;
+  }
+
+  #about img {
+    padding: 10px;
+  }
+
+  /* ------- Ideas ------- */
+
+  #ideas .ideas-container {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    margin: 40px auto;
+  }
+
+  #ideas img {
+    width: 350px;
+    padding: 20px;
+  }
+
+  #ideas .forests {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #ideas .beaches {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #ideas .invis-mobile {
+    display: inline-block;
+  }
+
+  #ideas .rustic-cabins {
+    display: none;
+  }
+
+  #ideas .pet-friendly {
+    display: none;
+  }
+
+  /* ------- Thinkfulhost ------- */
+  #host {
+    display: flex;
+    align-items: center;
+  }
+
+  #host .host-group {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  #host img {
+    width: 50%;
+  }
+}

@@ -30,51 +30,43 @@
   <main>
     <!-- Stay -->
     <section id="stay">
-      <h2><b>Find the perfect vacation rental</b></h2>
-      <!-- form  -->
-      <form>
-        <div class="form-container">
-          <div class="item space-between">
+        <h2>Find the perfect vacation rental</h2>
+        <!-- Create a form here -->
+        <form>
+          <div>
             <label for="location">Location</label>
-            <input id="location" type="text" name="location" placeholder="Search destination" autofocus="on" />
+            <input
+              id="location"
+              type="text"
+              placeholder="Search destination"
+              required
+            />
           </div>
-
-          <div class="item space-between">
-            <label for="date">Arrive</label>
-            <input id="date" class="date" type="date" name="date"
-              pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d " placeholder="mm/dd/yyyy" />
+          <div>
+            <label for="arrive">Arrive</label>
+            <input id="arrive" type="date" name="arrive" min="2021-05-09" />
           </div>
-
-          <div class="item space-between">
-            <label for="date">Depart</label>
-            <input id="date" class="date" type="date" name="date" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d
-        " placeholder="mm/dd/yyyy" />
+          <div>
+            <label for="depart">Depart</label>
+            <input id="depart" type="date" name="depart" min="2021-05-09" />
           </div>
-
-          <div class="item space-between">
-            <label for="rentals">Type</label>
-            <select name="rentals" size="1">
+          <div>
+            <p class="select">Type</p>
+            <select name="building" size="1">
               <option value="apartment">Apartment</option>
               <option value="barn">Barn</option>
               <option value="castle">Castle</option>
               <option value="houseboat">Houseboat</option>
-              <option value="tinyhouse">Tinyhouse</option>
+              <option value="tiny-house">Tiny House</option>
               <option value="yacht">Yacht</option>
               <option value="yurt">Yurt</option>
             </select>
           </div>
-
-          <div class="item">
-            <div class="button-container">
-              <button type="submit">Search</button>
-            </div>
+          <div>
+            <button type="submit">Search</button>
           </div>
-
-        </div>
-
-
-      </form>
-    </section>
+        </form>
+      </section>
 
     <!-- *** About -->
     <section id="about" class="alternate-background">

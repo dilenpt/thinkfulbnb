@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Lato', sans-serif;
+  width: 100%;
 }
 
 h2 {
@@ -32,6 +33,7 @@ section.alternate-background {
 
 img {
   width: 100%;
+  height: auto;
 }
 
 /* --- Groups & Items --- */
@@ -39,6 +41,9 @@ img {
 .group {
   display: flex;
   flex-direction: column;
+}
+.col {
+  align-items: center;
 }
 
 .item {
@@ -55,15 +60,19 @@ img {
 header {
   background-color: #ff385c;
   padding: 20px 20px 10px 20px;
-  text-align: center;
+  text-align: center
+  margin-bottom: 40px;
 }
 
 .logo {
   font-family: 'Pangolin', cursive;
-  font-size: 42px;
+  font-size: 50px;
   color: #fff;
 }
-
+header nav {
+  display: flex;
+  justify-content: center;
+}
 header nav ul {
   max-width: 400px;
   margin: 0 auto;
@@ -127,8 +136,9 @@ form .select {
 }
 
 /* ------- Ideas ------- */
-#ideas .invis-mobile {
-  display: none;
+.col2 {
+  flex-direction: column;
+  align-items: center;
 }
 
 /* ------- Footer ------- */
@@ -225,39 +235,10 @@ footer p {
 
   /* ------- Ideas ------- */
 
-  #ideas .ideas-container {
-    display: flex;
-    justify-content: space-between;
-    width: 900px;
-    margin: 40px auto;
-  }
-
-  #ideas img {
-    width: 350px;
-    padding: 20px;
-  }
-
-  #ideas .forests {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #ideas .beaches {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #ideas .invis-mobile {
-    display: inline-block;
-  }
-
-  #ideas .rustic-cabins {
-    display: none;
-  }
-
-  #ideas .pet-friendly {
-    display: none;
-  }
+  .col2 {
+  flex-direction: column;
+  align-items: center;
+}
 
   /* ------- Host ------- */
   #host {
@@ -274,3 +255,18 @@ footer p {
   #host img {
     width: 50%;
   }
+
+  @media all and (min-width: 750px) {
+  .picture-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .col2 {
+    flex: 1 0 calc(35% - 20px);
+    margin: 5px;
+  }
+  .padding {
+    margin: 10px;
+  }
+}

@@ -160,28 +160,28 @@ footer p {
     padding: 0 8px;
   }
 
-  /* ------- Top Section ------- */
-  #findrental form {
+  /* ------- Stay ------- */
+  #stay form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 0px 10px;
   }
 
-  #findrental label {
+  #stay label {
     width: 100%;
   }
 
-  #findrental .select {
+  #stay .select {
     width: 100%;
   }
 
-  #findrental button {
+  #stay button {
     padding: 10px 20px;
     font-size: 20px;
   }
 
-  #findrental div {
+  #stay div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -259,7 +259,7 @@ footer p {
     display: none;
   }
 
-  /* ------- Thinkfulhost ------- */
+  /* ------- Host ------- */
   #host {
     display: flex;
     align-items: center;
@@ -274,4 +274,3 @@ footer p {
   #host img {
     width: 50%;
   }
-}
